@@ -44,6 +44,7 @@ button {
   border: 0;
   color: white;
   font-size: 20px;
+  background-color: #36383a;
 }
 
 .divinie {
@@ -64,4 +65,23 @@ button {
 
 .equal {
   background-color: #d38901;
+}
+
+.clear {
+  background-color: #a0a0a0;
+}
+
+.plusMinus {
+  background-color: #a0a0a0;
+}
+
+.percent {
+  background-color: #a0a0a0;
+}
+
+.zero {
+  width: 110px;
+  border-radius: 30px;
+  text-align: left;
+  padding-left: 20px;
 }
