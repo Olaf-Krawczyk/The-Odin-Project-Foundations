@@ -14,9 +14,11 @@ const plus = document.querySelector(".plus");
 const clear = document.querySelector(".clear");
 const plusMinus = document.querySelector(".plusMinus");
 
-const tabela = [];
+let tabela = [];
 let maxNumber = 0;
 let changed = false;
+
+let calsShow = 0;
 
 const addToCalc = (nmb) => {
   if (maxNumber == 8) {
@@ -34,6 +36,12 @@ const addToCalc = (nmb) => {
 const add = (num) => {
   tabela.push(num);
   console.log(tabela);
+};
+
+const ourScore = () => {
+  for (let ind of tabela) {
+    calsShow += ind;
+  }
 };
 
 zero.addEventListener("click", () => {
@@ -79,6 +87,7 @@ nine.addEventListener("click", () => {
 clear.addEventListener("click", () => {
   number.textContent = "0";
   maxNumber = 0;
+  tabela = [];
 });
 
 plusMinus.addEventListener("click", () => {
@@ -93,4 +102,11 @@ plusMinus.addEventListener("click", () => {
 
 plus.addEventListener("click", () => {
   add(parseFloat(number.textContent));
+});
+
+const equal = document.querySelector(".equal");
+
+equal.addEventListener("click", () => {
+  ourScore();
+  console.log(calsShow);
 });
