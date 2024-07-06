@@ -11,102 +11,157 @@ const three = document.querySelector(".three");
 const zero = document.querySelector(".zero");
 
 const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const multiple = document.querySelector(".multiple");
+const divinie = document.querySelector(".divinie");
+const equal = document.querySelector(".equal");
 const clear = document.querySelector(".clear");
-const plusMinus = document.querySelector(".plusMinus");
 
-let tabela = [];
-let maxNumber = 0;
-let changed = false;
+let isZero = false;
 
-let calsShow = 0;
-
-const addToCalc = (nmb) => {
-  if (maxNumber == 8) {
-  } else {
-    if (parseFloat(number.textContent) == 0) {
-      number.textContent = `${nmb}`;
-      maxNumber++;
-    } else {
-      number.textContent += `${nmb}`;
-      maxNumber++;
-    }
-  }
-};
-
-const add = (num) => {
-  tabela.push(num);
-  console.log(tabela);
-};
-
-const ourScore = () => {
-  for (let ind of tabela) {
-    calsShow += ind;
-  }
-};
-
-zero.addEventListener("click", () => {
-  addToCalc(0);
-});
-
-one.addEventListener("click", () => {
-  addToCalc(1);
-});
-
-two.addEventListener("click", () => {
-  addToCalc(2);
-});
-
-three.addEventListener("click", () => {
-  addToCalc(3);
-});
-
-four.addEventListener("click", () => {
-  addToCalc(4);
-});
-
-five.addEventListener("click", () => {
-  addToCalc(5);
-});
-
-six.addEventListener("click", () => {
-  addToCalc(6);
-});
-
-seven.addEventListener("click", () => {
-  addToCalc(7);
-});
-
-eight.addEventListener("click", () => {
-  addToCalc(8);
-});
-
-nine.addEventListener("click", () => {
-  addToCalc(9);
-});
+let oldNum;
+let operator;
 
 clear.addEventListener("click", () => {
-  number.textContent = "0";
-  maxNumber = 0;
-  tabela = [];
-});
-
-plusMinus.addEventListener("click", () => {
-  console.log(number.textContent);
-  if (changed) {
-    number.textContent = parseFloat(number.textContent) * -1;
-  } else {
-    number.textContent = `-${number.textContent}`;
-    changed = true;
-  }
+  oldNum = "";
+  number.textContent = 0;
+  isZero = false;
 });
 
 plus.addEventListener("click", () => {
-  add(parseFloat(number.textContent));
+  oldNum = number.textContent;
+  operator = "+";
+  number.textContent = "0";
+  isZero = false;
 });
 
-const equal = document.querySelector(".equal");
+minus.addEventListener("click", () => {
+  oldNum = number.textContent;
+  operator = "-";
+  number.textContent = "0";
+  isZero = false;
+});
+
+multiple.addEventListener("click", () => {
+  oldNum = number.textContent;
+  operator = "*";
+  number.textContent = "0";
+  isZero = false;
+});
+
+divinie.addEventListener("click", () => {
+  oldNum = number.textContent;
+  operator = "/";
+  number.textContent = "0";
+  isZero = false;
+});
 
 equal.addEventListener("click", () => {
-  ourScore();
-  console.log(calsShow);
+  if (operator === "+") {
+    oldNum = parseInt(oldNum);
+    num = parseInt(number.textContent);
+    number.textContent = oldNum + num;
+  } else if (operator === "-") {
+    oldNum = parseInt(oldNum);
+    num = parseInt(number.textContent);
+    number.textContent = oldNum - num;
+  } else if (operator === "*") {
+    oldNum = parseInt(oldNum);
+    num = parseInt(number.textContent);
+    number.textContent = oldNum * num;
+  } else if (operator === "/") {
+    oldNum = parseInt(oldNum);
+    num = parseInt(number.textContent);
+    number.textContent = oldNum / num;
+  }
+});
+
+zero.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 0;
+    isZero = true;
+  } else {
+    number.textContent += 0;
+  }
+});
+
+one.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 1;
+    isZero = true;
+  } else {
+    number.textContent += 1;
+  }
+});
+
+two.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 2;
+    isZero = true;
+  } else {
+    number.textContent += 2;
+  }
+});
+
+three.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 3;
+    isZero = true;
+  } else {
+    number.textContent += 3;
+  }
+});
+
+four.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 4;
+    isZero = true;
+  } else {
+    number.textContent += 4;
+  }
+});
+
+five.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 5;
+    isZero = true;
+  } else {
+    number.textContent += 5;
+  }
+});
+
+six.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 6;
+    isZero = true;
+  } else {
+    number.textContent += 6;
+  }
+});
+
+seven.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 7;
+    isZero = true;
+  } else {
+    number.textContent += 7;
+  }
+});
+
+eight.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 8;
+    isZero = true;
+  } else {
+    number.textContent += 8;
+  }
+});
+
+nine.addEventListener("click", () => {
+  if (isZero == false) {
+    number.textContent = 9;
+    isZero = true;
+  } else {
+    number.textContent += 9;
+  }
 });
