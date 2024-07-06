@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  border-bottom: 2px solid black;
+  max-height: 600px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aside {
+  width: 1200px;
+  height: 1000px;
+  background-image: url(photo-1585202900225-6d3ac20a6962.avif);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+.bg {
+  width: 488px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+}
+.txt {
+  margin: 150px 400px 0 50px;
+}
+
+.one {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.two {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.three {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  margin-top: 70px;
+  background-color: rgb(1, 77, 1);
+  font-size: 16px;
+  padding: 15px 40px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+}
+
+.login {
+  margin-top: 30px;
+}
+
+a {
+  color: rgb(1, 77, 1);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+label:nth-of-type(1) {
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+label:nth-of-type(2) {
+  margin-left: 415px;
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+label:nth-of-type(3) {
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+label:nth-of-type(4) {
+  margin-left: 415px;
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+label:nth-of-type(5) {
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+label:nth-of-type(6) {
+  margin-left: 415px;
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+br:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+
+br:nth-of-type(4) {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-right: 250px;
+  width: 210px;
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+}
